@@ -1,4 +1,5 @@
 version: 2
+
 jobs:
   build:
     docker:
@@ -6,15 +7,12 @@ jobs:
 
     steps:
       - checkout
-      
-      - run:
-          name: build dependencies
-          command: bundle install
 
       - run:
-          name: build the jekyll site
-          command: bundle exec jekyll build
+          name: Greeting
+          command: echo Hello, world.
 
-      - run:
-          name: Print the Current Time
-          command: date
+      -run:
+        name: Print the Current Time
+        command: date
+
